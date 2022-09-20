@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Wahran";
+  src: url("./ArbFONTS-Wahran-Light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Wahran", "Arial Narrow", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+}
+
+body {
+  background-image: url("./national.jfif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+}
+body,
+#quiz-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#quiz-container {
+  padding: 1% 0;
+  justify-content: flex-start;
+  background-color: white;
+  height: fit-content;
+  width: 50%;
+  min-width: 200px;
+  border: 2px solid green;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 1.7rem;
+}
+
+.answers,
+.controls {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.answers {
+  margin-top: 1%;
+}
+
+button {
+  cursor: pointer;
+  width: 80%;
+  transition-duration: 400ms;
+  transition-timing-function: ease-out;
+}
+
+.answer-button {
+  height: 25%;
+  margin-top: 2%;
+  padding-right: 2.5%;
+  text-align: right;
+  background-color: white;
+  border: 1px black solid;
+  border-radius: 25px;
+}
+
+.answer-button:hover {
+  background-color: lightblue;
+  transform: scale(1.05);
+}
+
+.controls {
+  margin-top: 13%;
+  height: 15%;
+}
+
+#next,
+#start {
+  background-color: #5bb318;
+  padding: 2% 0;
+  width: 70%;
+  border-radius: 50px;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+}
+
+#next:hover,
+#start:hover {
+  filter: brightness(110%);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px -4px #7dce13;
+}
+
+#next{
+    font-size: 1.3rem;
+    max-width: 300px;
+}
+
+.hide {
+  display: none;
+}
