@@ -28,6 +28,7 @@ startBtn.addEventListener("click", () => {
   nextBtn = document.getElementById("next-button");
   nextBtn.addEventListener("click", getNextQuestion);
   getNextQuestion();
+  container.className = "quiz-container-questions"
 });
 
 function getNextQuestion() {
