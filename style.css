@@ -12,6 +12,8 @@
   font-family: "Wahran", "Arial Narrow", Arial, sans-serif;
   padding: 0;
   margin: 0;
+  text-align: center;
+  direction: rtl;
 }
 
 body {
@@ -43,7 +45,6 @@ body,
 
 #intro{
   font-size: 1.3rem;
-  text-align: center;
 }
 
 #intro span{
