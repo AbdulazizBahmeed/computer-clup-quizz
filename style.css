@@ -12,7 +12,6 @@
   font-family: "Wahran", "Arial Narrow", Arial, sans-serif;
   padding: 0;
   margin: 0;
-  direction: rtl;
 }
 
 body {
@@ -32,17 +31,27 @@ body,
   flex-direction: column;
 }
 #quiz-container {
-  padding: 1% 0;
+  padding: 2% 2%;
   justify-content: flex-start;
   background-color: white;
   height: fit-content;
   width: 50%;
-  min-width: 200px;
+  max-width: 500px;
   border: 2px solid green;
   border-radius: 10px;
 }
 
-p {
+#intro{
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+#intro span{
+  font-size: 1.3rem;
+  color: green;
+}
+
+#question {
   font-size: 1.7rem;
 }
 
@@ -60,7 +69,7 @@ p {
 
 button {
   cursor: pointer;
-  width: 80%;
+  width: 90%;
   transition-duration: 400ms;
   transition-timing-function: ease-out;
 }
@@ -69,7 +78,7 @@ button {
   height: 25%;
   margin-top: 2%;
   padding-right: 2.5%;
-  text-align: right;
+  color: black;
   background-color: white;
   border: 1px black solid;
   border-radius: 25px;
@@ -85,29 +94,69 @@ button {
   height: 15%;
 }
 
-#next,
+.next,
 #start {
   background-color: #5bb318;
   padding: 2% 0;
-  width: 70%;
+  width: 60%;
   border-radius: 50px;
   color: white;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
-#next:hover,
+.next:hover,
 #start:hover {
   filter: brightness(110%);
   transform: scale(1.05);
   box-shadow: 0 10px 20px -4px #7dce13;
 }
 
-#next{
-    font-size: 1.3rem;
+.next{
     max-width: 300px;
 }
 
-.hide {
-  display: none;
+.disabled-option, .disabled-option:hover{
+  transition-duration: 100ms;
+  color: black;
+  filter:brightness(90%);
+  transform: scale(0.9);
+  background-color: lightgray;
+  cursor: default;
+}
+
+.selected-option, .selected-option:hover{
+  color: white;
+  transition-duration: 0;
+  filter: none;
+  transform: scale(1.15);
+}
+
+.wrong,.wrong:hover{
+  background-color: red;
+  animation: error 400ms linear;
+}
+
+.correct,.correct:hover{
+  background-color:#6ff06f;
+}
+
+.green-backgorund, .green-backgorund:hover{
+  background-color: green;
+}
+
+.disabled, .disabled:hover {
+  filter: opacity(0.5);
+  cursor:not-allowed ;
+  transform: none;
+  box-shadow: none;
+}
+
+@keyframes error {
+  0%   {transform: translateX(2%);}
+  20%  {transform: translateX(-2%);}
+  40%  {transform: translateX(2%);}
+  60%  {transform: translateX(-2%);}
+  80%  {transform: translateX(2%);}
+  100%  {transform: translateX(0%);}
 }
