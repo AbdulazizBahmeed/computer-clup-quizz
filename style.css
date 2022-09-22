@@ -3,7 +3,6 @@
   src: url("./fonts/noto.ttf");
   font-weight: normal;
   font-style: normal;
-
 }
 
 * {
@@ -23,22 +22,40 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   width: 100vw;
   height: 100vh;
   background-color: lightgray;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
 }
 
-#quiz-container{
+#header {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  padding-top: 2.5%;
+  width: 100%;
+}
+#header a {
+  width: 100%;
+}
+
+#uqu-logo {
+  width: 25%;
+  cursor: pointer;
+}
+
+#quiz-container {
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   width: 50%;
-  height: 90%;
+  height: 80%;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.4);
@@ -47,13 +64,13 @@ body {
   backdrop-filter: blur(5px);
 }
 
-#intro{
+#intro {
   font-size: 1.6rem;
   text-align: center;
   line-height: 140%;
 }
 
-#intro span{
+#intro span {
   font-size: 1.6rem;
   color: white;
 }
@@ -67,12 +84,13 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items:center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .answers {
-  height: 50%;
+  height: 45%;
 }
 
 button {
@@ -97,14 +115,14 @@ button {
 }
 
 .controls {
-  height: 15%;
+  justify-content: center;
 }
 
 .next,
 #start {
   background-color: #f19215;
-  padding: 2% 0;
-  width: 50%;
+  /* padding: 2% 0; */
+  width: 60%;
   border-radius: 25px;
   color: white;
   border: none;
@@ -118,105 +136,250 @@ button {
   box-shadow: 0 10px 20px -4px #f19215;
 }
 
-.next{
-    max-width: 300px;
-    height: 100%;
+.next {
+  max-width: 300px;
+  height: 100%;
 }
 
-.disabled-option, .disabled-option:hover{
+.disabled-option,
+.disabled-option:hover {
   transition-duration: 100ms;
   color: black;
-  filter:brightness(90%);
+  filter: brightness(90%);
   transform: scale(0.8);
   background-color: lightgray;
   cursor: default;
 }
 
-.selected-option, .selected-option:hover{
+.selected-option,
+.selected-option:hover {
   color: white;
   transition-duration: 0;
   filter: none;
   transform: scale(1.1);
 }
 
-.wrong,.wrong:hover{
+.wrong,
+.wrong:hover {
   background-color: rgb(249, 41, 41);
   animation: error 400ms linear;
 }
 
-.correct,.correct:hover{
-  background-color:#6ff06f;
+.correct,
+.correct:hover {
+  background-color: #6ff06f;
 }
 
-.green-backgorund, .green-backgorund:hover{
+.green-backgorund,
+.green-backgorund:hover {
   background-color: rgb(7, 179, 7);
 }
 
-.disabled, .disabled:hover {
+.disabled,
+.disabled:hover {
   filter: opacity(0.5);
-  cursor:not-allowed ;
+  cursor: not-allowed;
   transform: none;
   box-shadow: none;
 }
 
+#twitter-btn {
+  text-decoration: none;
+  background-color: #1d9bf0;
+  color: white;
+  border-radius: 50px;
+  display: inline-block;
+  /* height: 30%; */
+  width: 40%;
+  min-width: 200px;
+  padding: 0.1%;
+}
+
+#outro{
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 180%;
+}
+
+#credit{
+  font-size: 0.6rem;
+}
+
+#credit-btn{
+  font-size: 0.5rem;
+  margin-top: 8px;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  border-radius: 50px;
+  display: inline-block;
+  border: 2px solid;
+  width: 40%;
+  min-width: 120px;
+  padding: 1% 0;
+  transition: 300ms ease-out;
+}
+
+#credit-btn:hover{
+  background-color: #1d9bf0;
+  border: 2px solid #1d9bf0;
+}
+
+#twitter-logo{
+  width: 0.6rem;
+}
+
 @keyframes error {
-  0%   {transform: translateX(2%);}
-  20%  {transform: translateX(-2%);}
-  40%  {transform: translateX(2%);}
-  60%  {transform: translateX(-2%);}
-  80%  {transform: translateX(2%);}
-  100%  {transform: translateX(0%);}
+  0% {
+    transform: translateX(2%);
+  }
+  20% {
+    transform: translateX(-2%);
+  }
+  40% {
+    transform: translateX(2%);
+  }
+  60% {
+    transform: translateX(-2%);
+  }
+  80% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  * {
+    font-size: 20px;
+  }
+
+  #quiz-container {
+    width: 60%;
+  }
+
+  #answers{
+    height: 55%;
+  }
+
+  #uqu-logo {
+    width: 35%;
+  }
+
+  #intro {
+    font-size: 1.3rem;
+  }
+  #intro span {
+    font-size: 1.1rem;
+  }
+  #question {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   * {
-    font-size: 17px;
+    font-size: 20px;
   }
-
-  body{
+  body {
     height: 90vh;
   }
 
-  #quiz-container{
-    width: 95%;
-    height: 80%;
+  #header {
+    padding-top: 4%;
+  }
+  #uqu-logo {
+    width: 45%;
   }
 
-  #question{
-    font-size: 1.6rem;
+  #quiz-container {
+    width: 85%;
+  }
+  #intro {
+    font-size: 1.2rem;
   }
 
-  #answers{
-    height:40%;
+  #intro {
+    font-size: 1.2rem;
   }
-  .answer-button{
+  
+  #intro span {
+    font-size: 1.2rem;
+  }
+
+  #question {
+    font-size: 1.3rem;
+  }
+
+  #answers {
+    height: 45%;
+  }
+  .answer-button {
     width: 78%;
     border-width: 3px;
     height: 25%;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
   }
-  .controls{
-    height: 15%;
-  }
-
-  #start{
-    font-size: 1.8rem;
-    height: 15%;
-    width: 80%;
+  .controls {
+    height: 25%;
   }
 
-  .next{
-    height: 100%;
-    width: 90%;
-    font-size: 1.8rem;
+  #start {
+    font-size: 1.5rem;
+    padding: 0.3%;
+    width: 65%;
   }
+
+  .next {
+    height: 75%;
+    width: 60%;
+    font-size: 1.5rem;
+  }
+
+  #outro{
+    font-size: 1.2rem;
+  }
+  #credit{
+    font-size: 0.8rem;
+  }
+  #credit-btn{
+    min-width: 170px;
+    font-size: 0.8rem;
+  }
+  #twitter-logo{
+    width: 0.8rem;
+  }
+  
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 450px) {
   * {
-    font-size: 14px;
+    font-size: 21px;
   }
 
-  #quiz-container{
-    height: 90%;
+  #intro {
+    font-size: 1.1rem;
+  }
+  
+  #intro span {
+    font-size: 1.1rem;
+  }
+
+  #question {
+    font-size: 1.2rem;
+  }
+  .answer-button {
+    height: 26%;
+    font-size: 1.1rem;
+  }
+
+  .controls {
+    height: 18%;
+  }
+
+  .next {
+    height: 70%;
+    width: 90%;
+    font-size: 1.3rem;
   }
 }

@@ -50,13 +50,56 @@ function getNextQuestion() {
 }
 
 function printResult() {
-  container.innerHTML = `<p id="intro">
-  لقد جاوبت على ${score} من أصل 8 أسئلة <br /><br />
-  شارك الكل بنتيجتك على تويتر 🥳💚
+  container.innerHTML = `<p id="outro">
+  جاوبت على ${score} أسئلة<br />
+  من أصل 8 🥳<br />
+  شارك النتيجة على تويتر
+  <a
+    id="twitter-btn"
+    target="_blank"
+    href="https://twitter.com/intent/tweet?text=%D9%88%D9%85%D9%86+%D8%A8%D8%A7%D8%A8+%E2%80%9D+%D9%87%D9%85%D9%91%D8%A9+%D8%AD%D8%AA%D9%89+%D8%A7%D9%84%D9%82%D9%85%D9%91%D8%A9+%E2%80%9C+%D8%A7%D8%AB%D8%A8%D8%AA+%D9%84%D9%86%D8%A7+%D9%87%D9%85%D9%91%D8%AA%D9%83+%0D%0A%D9%88%D8%A3%D9%88%D8%B5%D9%84+%D9%81%D9%8A%D9%87%D8%A7+%D9%84%D9%84%D9%82%D9%85%D9%91%D8%A9+%D9%85%D8%B9+%D8%A3%D8%B3%D8%A6%D9%84%D8%A9+%D9%86%D8%A7%D8%AF%D9%8A%D9%86%D8%A7%21+%40uqucc%0D%0A%0D%0A%D8%A3%D9%86%D8%A7+%D9%88%D8%B5%D9%84%D8%AA+%D8%A8%D9%87%D9%85%D9%91%D8%AA%D9%8A+%D8%A5%D9%84%D9%89+${score}+%D9%85%D9%86+%D8%A3%D8%B5%D9%84+8+%0D%0A%D9%88+%D8%A3%D9%86%D8%AA+%D8%8C+%D8%A8%D8%AA%D9%82%D8%AF%D8%B1+%D8%AA%D9%86%D8%A7%D9%81%D8%B3%D9%86%D9%8A+%D8%B9%D9%84%D9%89+%D8%A7%D9%84%D9%82%D9%85%D9%91%D8%A9%D8%9F%0D%0A%23%D8%A7%D9%84%D9%8A%D9%88%D9%85_%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A_%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A_92%0D%0A%0D%0Ahttps%3A%2F%2Fabdulazizbahmeed.github.io%2Fcomputer-clup-quizz%2F"
+  >
+    مشاركة النتيجة&nbsp;
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="currentColor"
+      class="bi bi-twitter"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+      />
+    </svg>
+  </a>
 </p>
-<a class="twitter-btn" target="_blank" href="https://twitter.com/intent/tweet?text=لقد%20جاوبت%20على%20${score}%20أسئلة%20من%20أصل%208&url=https%3A%2F%2Fabdulazizbahmeed.github.io%2Fcomputer-clup-quizz">
-  Tweet</a
->`;
+<div>
+  <p id="credit">
+    &nbsp;صمم هذا الموقع بـ
+    <img width="8%" src="./images/like.png" />
+    بواسطة: <br />
+    <span>
+      <a
+        id="credit-btn"
+        target="_blank"
+        href="https://twitter.com/A_Bahmeed"
+      >
+        عبدالعزيز باحميد&nbsp;&nbsp;
+        <svg
+          id="twitter-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          class="bi bi-twitter"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+          />
+        </svg> </a
+    ></span>
+  </p>
+</div>`;
 }
 
 function setNextQuestion(question) {
