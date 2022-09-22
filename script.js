@@ -54,7 +54,7 @@ function printResult() {
   لقد جاوبت على ${score} من أصل 8 أسئلة <br /><br />
   شارك الكل بنتيجتك على تويتر 🥳💚
 </p>
-<a class="twitter-btn" target="_blank" href="https://twitter.com/intent/tweet?text=لقد%20جاوبت%20على%20${score}%20أسئلة%20من%20أصل%208">
+<a class="twitter-btn" target="_blank" href="https://twitter.com/intent/tweet?text=لقد%20جاوبت%20على%20${score}%20أسئلة%20من%20أصل%208&url=https%3A%2F%2Fabdulazizbahmeed.github.io%2Fcomputer-clup-quizz">
   Tweet</a
 >`;
 }
