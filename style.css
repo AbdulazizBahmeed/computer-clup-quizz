@@ -76,7 +76,7 @@ body {
 }
 
 #question {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .answers,
@@ -365,7 +365,7 @@ button {
   }
 
   #question {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .answer-button {
     height: 26%;
