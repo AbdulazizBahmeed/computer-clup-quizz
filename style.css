@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Wahran";
-  src: url("./ArbFONTS-Wahran-Light.otf");
+  src: url("./fonts/noto.ttf");
   font-weight: normal;
   font-style: normal;
 
@@ -8,7 +8,7 @@
 
 * {
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: bold;
   font-family: "Wahran", "Arial Narrow", Arial, sans-serif;
   padding: 0;
@@ -19,48 +19,47 @@
 }
 
 body {
-  background-image: url("./national.jfif");
+  background-image: url("./images/bg.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
   height: 100vh;
   background-color: lightgray;
-}
-body,
-#quiz-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
 }
-#quiz-container {
-  padding: 2% 2%;
-  justify-content: space-between;
-  background-color: white;
-  height: 65%;
-  width: 50%;
-  max-width: 500px;
-  border: 2px solid green;
-  border-radius: 10px;
-}
 
-.quiz-container-questions{
-  height: 80% !important;
+#quiz-container{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
 }
 
 #intro{
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   text-align: center;
+  line-height: 140%;
 }
 
 #intro span{
-  font-size: 1.3rem;
-  color: green;
+  font-size: 1.6rem;
+  color: white;
 }
 
 #question {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 .answers,
@@ -68,31 +67,28 @@ body,
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items:center;
 }
 
 .answers {
-  margin-top: 1%;
-  height: 65%;
+  height: 50%;
 }
 
 button {
   cursor: pointer;
-  width: 90%;
+  width: 75%;
   transition-duration: 400ms;
   transition-timing-function: ease-out;
 }
 
 .answer-button {
-  height: 15%;
-  margin-top: 2%;
+  height: 20%;
   padding-right: 2.5%;
   color: black;
   background-color: white;
   border: 1px black solid;
   border-radius: 25px;
-  font-size: 1.2rem;
 }
 
 .answer-button:hover {
@@ -101,25 +97,25 @@ button {
 }
 
 .controls {
-  height: 12%;
+  height: 15%;
 }
 
 .next,
 #start {
-  background-color: #5bb318;
+  background-color: #f19215;
   padding: 2% 0;
-  width: 60%;
-  border-radius: 50px;
+  width: 50%;
+  border-radius: 25px;
   color: white;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .next:hover,
 #start:hover {
   filter: brightness(110%);
   transform: scale(1.05);
-  box-shadow: 0 10px 20px -4px #7dce13;
+  box-shadow: 0 10px 20px -4px #f19215;
 }
 
 .next{
@@ -131,7 +127,7 @@ button {
   transition-duration: 100ms;
   color: black;
   filter:brightness(90%);
-  transform: scale(0.9);
+  transform: scale(0.8);
   background-color: lightgray;
   cursor: default;
 }
@@ -140,11 +136,11 @@ button {
   color: white;
   transition-duration: 0;
   filter: none;
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 .wrong,.wrong:hover{
-  background-color: red;
+  background-color: rgb(249, 41, 41);
   animation: error 400ms linear;
 }
 
@@ -153,7 +149,7 @@ button {
 }
 
 .green-backgorund, .green-backgorund:hover{
-  background-color: green;
+  background-color: rgb(7, 179, 7);
 }
 
 .disabled, .disabled:hover {
@@ -172,9 +168,9 @@ button {
   100%  {transform: translateX(0%);}
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
   * {
-    font-size: 21px;
+    font-size: 17px;
   }
 
   body{
@@ -182,22 +178,25 @@ button {
   }
 
   #quiz-container{
-    justify-content: space-around;
     width: 95%;
-    height: 70%;
+    height: 80%;
+  }
+
+  #question{
+    font-size: 2.2rem;
   }
 
   #answers{
-    height:60%;
+    height:40%;
   }
   .answer-button{
-    width: 90%;
+    width: 78%;
     border-width: 3px;
-    height: 18%;
-    font-size: 1.2rem;
+    height: 25%;
+    font-size: 1.3rem;
   }
   .controls{
-    height: 20%;
+    height: 15%;
   }
 
   #start{
@@ -207,9 +206,17 @@ button {
   }
 
   .next{
-    height: 80%;
-    margin: 0;
-    width: 80%;
+    height: 100%;
+    width: 90%;
     font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  * {
+    font-size: 14px;
+  }
+
+  #quiz-container{
+    height: 90%;
   }
 }
