@@ -51,9 +51,9 @@ function getNextQuestion() {
 
 function printResult() {
   container.innerHTML = `<p id="outro">
-  جاوبت على ${score} أسئلة<br />
+  تحصلت على ${score} من النقاط<br />
   من أصل 8 🥳<br />
-  شارك النتيجة على تويتر
+  شاركنا النتيجة على تويتر
   <a
     id="twitter-btn"
     target="_blank"

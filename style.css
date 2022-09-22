@@ -192,7 +192,7 @@ button {
   /* height: 30%; */
   width: 40%;
   min-width: 200px;
-  padding: 0.1%;
+  /* padding: 0.1%; */
 }
 
 #outro{
@@ -319,7 +319,7 @@ button {
     width: 78%;
     border-width: 3px;
     height: 25%;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .controls {
     height: 25%;
@@ -370,7 +370,7 @@ button {
   }
   .answer-button {
     height: 26%;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .controls {
@@ -380,6 +380,35 @@ button {
   .next {
     height: 70%;
     width: 90%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  * {
+    font-size: 20px;
+  }
+
+  #intro {
+    font-size: 1rem;
+  }
+  
+  #intro span {
+    font-size: 1rem;
+  }
+
+  #question {
+    font-size: 1.2rem;
+  }
+  .answer-button {
+    font-size: 0.8rem;
+  }
+
+  .controls {
+    height: 22%;
+  }
+
+  .next {
+    font-size: 1.2rem;
   }
 }
