@@ -51,7 +51,7 @@ function getNextQuestion() {
 
 function printResult() {
   container.innerHTML = `<p id="outro">
-  حصلت على ${score} من النقاط<br />
+  حصلت على ${score} نقاط<br />
   من أصل 8 🥳<br />
   شاركنا النتيجة على تويتر
   <a
