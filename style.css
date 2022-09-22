@@ -189,10 +189,9 @@ button {
   color: white;
   border-radius: 50px;
   display: inline-block;
-  /* height: 30%; */
   width: 40%;
   min-width: 200px;
-  /* padding: 0.1%; */
+  padding: 0.1%;
 }
 
 #outro{
